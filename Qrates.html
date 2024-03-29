@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qrates</title>
+    <style>
+        body{
+    font-family: 'Qratesis', sans-serif;
+    margin: 0;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 636px;
+    margin-top: 20px;
+    position: sticky;
+    margin-left: 10px;
+    
+}
+.navLink{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+}
+#logo{
+    height: 56px;
+    width: 56px;
+}
+a{
+    color: black;
+    text-decoration: none;
+    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+    font-size: 14px;
+    margin-left: 5px;
+    font-weight: bold;
+}
+.navButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    gap: 5px;
+}
+#login{
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+#makeRecord{
+    background-color: rgba(128, 128, 128, 0.598);
+    color: white;
+    padding: 16px 32px;
+    border: none;
+    font-weight: bold;
+    
+    font-size: 15.5px;
+    border-radius: 30px;
+}
+.navLink svg{
+    height: 16.5px;
+    width: 16.5px;
+}
+.top{
+    display: flex;
+    flex-direction: row;
+    transform: translateY(10px);
+}
+.top-text{
+    width: 730px;
+    margin: 34px;
+    margin-top: 80px;
+}
+.top-images b{
+    position: absolute;
+    transform: translate(570px , -205px) rotate(90deg) ;
+}
+.top-images a{
+    text-decoration: underline;
+}
+
+#ohk-img{
+    height: 140px;
+    width: 130px;
+    position: absolute;
+    z-index: 2;
+    transform: translate(-30px , 280px);
+}
+#top-man{
+    position: relative;
+    width: 100%;
+    max-width: 510px;
+    border: 3px solid black;
+    transform: rotate(10deg) translate(40px , 52px)  scaleX(1.05);
+    max-height: 75vh;
+}
+
+.top span{
+    display: block;
+    margin: 0;
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 70px;
+}
+.top p{
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 45px;
+}
+.tra-text{    
+    display: block;
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000000;
+    letter-spacing: 0.95px;
+    line-height: 70px;
+}
+#for-fans{
+    height: 50px;
+    font-size: 15px;
+    width: 250px;
+    margin-right: 10px;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 24px;
+    font-weight: bold;
+}
+#for-artists{
+    height: 50px;
+    font-size: 15px;
+    padding: 10px;
+    width: 250px;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    border-radius: 24px;
+}
+.next-top{
+    margin: 0;
+    height: 700px;
+    transform: translateY(100px);
+    background-image: url(https://images.prismic.io/qrates-prd/8a016dbb-a0b2-411e-8ee8-fd1e0d0f81dd_records_plie_up_two.jpg?auto=compress,format);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+
+}
+.next-top-for-fans{
+    display: block;
+    border: 2px solid white;
+    font-size: 13px;
+    margin: 40px;
+    transform: translateY(60px);
+    width: 70px;
+    padding: 9px;
+    font-weight: bold;
+    
+}
+.next-top-links a{
+    color: white;
+    font-size: 60px;
+    display: block;
+}
+.next-top-links a:hover{
+    text-decoration: underline;
+}
+.next-top-links{
+    margin-top: 100px;
+    margin-left: 40px;
+}
+.Latest-from-qrates{
+    margin-left: 50px;
+    margin-top: 240px;
+}
+.Latest-from-qrates a{
+    color: white;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.sec-top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: rgb(255, 255, 0);
+    height: auto
+}
+.sec-text button{
+    height: 50px;
+    font-size: 15px;
+    padding: 10px;
+    width: 250px;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    border-radius: 24px;
+}
+.sec-text span{
+    display: block;
+    border: 2px solid white;
+    font-size: 13px;
+    margin: 40px 0px 0px 0px;
+    background-color: white;
+    width: 90px;
+    border: 2px solid black;
+    padding: 10px;
+    font-weight: bold;
+}
+#sec-man{
+    margin-left: 100px;
+    border: 3px solid black;
+    position: relative;
+    transform: rotate(-10deg) translate(-100px , 40px)  scaleX(0.97) scaleY(0.97);
+    max-height: 75vh;
+    z-index: 1;
+}
+#disc-img{
+    position: absolute;
+    height: 120px;
+    transform: translate(-30px , 260px) Scale(1.05 , 0.8);
+    width: 160px;
+    z-index: 2;
+}
+.sec-text h1{
+    font-size: 38px;
+    width: 650px;
+}
+.sec-text p{
+    font-size: 28px;
+    font-weight: 500;
+}
+.sec-text{
+    width: 720px;
+    margin-top: 150px;
+    margin-bottom: 100px;
+}
+.three-top{
+    object-fit: contain;
+    background-image: url(https://images.prismic.io/qrates-prd/c204447b-9840-4a32-9a4a-2e36945dbec9_discover_nav_discover.jpg?auto=compress,format);
+}
+.three-top-links a{
+    color: white;
+    font-size: 60px;
+    display: block;
+}
+.three-top-links a:hover{
+    text-decoration: underline;
+}
+.three-top-links{
+    margin-top: 100px;
+    margin-left: 40px;
+}
+.latest-from-artists{
+    margin-left: 50px;
+    margin-top: 160px;
+    padding-bottom: 40px;
+}
+.latest-from-artists a{
+    color: white;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.three-top-for-artists{
+    display: block;
+    border: 2px solid white;
+    font-size: 13px;
+    color: white;
+    margin-left: 40px;
+    transform: translateY(60px);
+    width: 120px;
+    padding: 9px 0px;
+    padding-left: 12px;
+    font-weight: bold;
+}
+.four-top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding-bottom: 50px;
+}
+.four-try-it-now{
+    display: block;
+    border: 2px solid white;
+    font-size: 13px;
+    margin: 40px 0px 0px 0px;
+    color: white;
+    background-color: transparent;
+    width: auto;
+    
+    padding: 10px;
+    font-weight: bold;
+}
+.four-top h1{
+    font-size: 38px;
+    margin-bottom: 0;
+}
+.four-top img{
+    height: 198px;
+    width: 350px;
+    margin-bottom: 75px;
+    margin-top: 40px;
+}
+.four-top p{
+    font-size: 20px;
+    margin-bottom: 50px;
+    width: 700px;
+    line-height: 1.25;
+}
+.four-top button{
+    height: 50px;
+    font-size: 15.5px;
+    width: 300px;
+    background-color: yellow;
+    border: none;
+    border-radius: 24px;
+    font-weight: bold;
+}
+#sparkle{
+    position: absolute;
+    transform: translate(-380px , 140px);
+    height: 130px;
+    width: 120px;
+}
+.the-grid{
+    display: flex;
+    flex-wrap: wrap;
+    background: #000000;
+    
+}
+.the-grid img{
+    height: 374.8px;
+    width: 374.8px;
+    object-fit: cover;
+}
+footer{
+    background-color: black;
+    padding-top: 50px;
+    padding-bottom: 75px;
+}
+.footer-top{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    font-size: 10px;
+    gap: 190px;
+    margin-left: 75px;
+}
+.left{
+    margin-left: 36px;
+    margin-top: 25px;
+}
+.footer-for-artists{
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+.footer-for-artists a{
+    color: white;
+    font-size: 20px;
+    margin-top: 12px;
+}
+.tra-font{
+    display: block;
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #ffffff;
+}
+.right{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 30px;
+}
+.right a{
+    color: white;
+    
+}
+.footer-bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 400px;
+    margin-top: 320px;
+}
+.right select{
+    height: 50px;
+    width: 150px;
+    margin-left: 320px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding-left: 15px;
+    font-size: 15px;   
+}
+.footer-btns{
+    margin-left: 340px;
+}
+.footer-btns a{
+    background-color: transparent;
+}
+.footer-btns svg{
+    height: 32px;
+    width: 32px;
+}
+.end{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    font-size: 9px;
+}
+.end span{
+    font-size: 14px;
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="navLink">
+            <img src="https://assets.qrates.com/packs/media/logos/qrates-logo-6b1bd403.svg" id="logo">
+            <a href="">DISCOVER MUSIC <span class="down-up">&bigtriangledown;</span></a>
+            <a href="">FOR ARTISTS</a>
+            <a href="">FOR FANS</a>
+            <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+              </svg></a>
+            <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+              </svg></a>
+        </div>
+        <div class="navButton">
+            <button id="login">LOG IN</button>
+            <button id="makeRecord">MAKE YOUR OWN</button>
+        </div>
+    </nav>
+    <section class="top">
+        <div class="top-text">
+            <h1><span>QRATES</span><span class="tra-text">MUSIC IN</span><span class="tra-text">YOUR HANDS</span></h1>
+            <p>We make it easy for artists to make vinyl and cassettes, so fans can keep pieces of the music they love ↓</p>
+            <button id="for-fans">FOR FANS</button>
+            <button id="for-artists">FOR ARTISTS</button>
+        </div>
+       <div class="top-images">
+        <img src="https://assets.qrates.com/packs/media/sticker/ok-56835833.png" alt="" id="ohk-img">
+        <img src="https://images.prismic.io/qrates-prd/539d6e5d-f59b-41c6-b2f2-30aac553065e_image00026.jpeg?auto=compress,format&rect=0,0,3024,4032&w=1200&h=1600" alt="" id="top-man">
+        <b><a href="">MAYAEWK</a> IS ON QRATES</b>
+       </div>
+    </section>
+    <section class="next-top">
+        <span class="next-top-for-fans">FOR FANS</span>
+        <div class="next-top-links">
+            <a href="" id="f1">Records</a>
+            <a href="">Cassettes</a>
+            <a href="">Stories</a>
+            <a href="">Qrates Curated</a>
+        </div>
+        <div class="Latest-from-qrates"><a href="">The latest from the Qrates community &rightarrow;</a></div>
+    </section>
+    <section class="sec-top">
+        <div class="sec-images">
+            <img src="https://assets.qrates.com/packs/media/sticker/fast-f0613562.png" alt="" id="disc-img">
+            <img src="https://images.prismic.io/qrates-prd/539d6e5d-f59b-41c6-b2f2-30aac553065e_image00026.jpeg?auto=compress,format&rect=0,0,3024,4032&w=1200&h=1600" alt="" id="sec-man">
+        </div>
+        <div class="sec-text">
+            <span>FOR ARTISTS</span>
+            <h1>Your music on vinyl and cassette, direct to your fans.</h1>
+            <p>Qrates is a one-stop platform for your vinyl record and cassette production, logistics, sales, and distribution. We take away the burden of hassle, cost, and risk, and return more time and revenue to artists and labels.</p>
+            <button>FOR ARTISTS</button>
+        </div>
+    </section>
+    <section class="three-top">
+        <span class="three-top-for-artists">ARTIST TOOLKIT</span>
+        <div class="three-top-links">
+            <a href="">Vinyl Knowledge</a>
+            <a href="">Distribution & Commision</a>
+            <a href="">Mixing & Mastering</a>
+            <a href="">Inspiration</a>
+            <a href="">Qrates Tips</a>
+        </div>
+        <div class="latest-from-artists"><a href="">The latest from the Artist Toolkit &rightarrow;</a></div>
+    </section>
+    <section class="four-top">
+        <img src="https://assets.qrates.com/packs/media/sticker/sparkle_white-15aaeb14.png" alt="" id="sparkle">
+        <span class="four-try-it-now">TRY IT NOW</span>
+        <h1>Make it real with Qrates Studio</h1>
+        <p>Design the look and feel of your vinyl and cassette and use the profit calculator to immediately see how much your project will cost, and how much you'll earn.</p>
+        <img src="https://assets.qrates.com/packs/media/section_vinyl_studio/sample_4dilla-d886be83.png" alt="">
+        <button id="try-it-now">TRY IT NOW</button>
+    </section>
+    <div class="the-grid">
+        <a href=""><img src="https://images.prismic.io/qrates-prd/41a354e8-c43e-416c-9972-3c290b196306_2023_03_21_Adam+Bronstein_QRates.png?auto=compress,format&rect=5,404,1195,1195&w=1080&h=1080" alt=""></a>
+        <a href=""><img src="https://images.prismic.io/qrates-prd/4256bada-72c1-4fc2-b09a-86d401088e21_Knobs+-+Option+1+splash.PNG?auto=compress,format&rect=0,66,2256,2256&w=1080&h=1080" alt=""></a>
+        <a href=""><img src="https://images.prismic.io/qrates-prd/b4192f01-7f23-4f72-99e3-a65cff908576_Lofi+Toons+2.jpg?auto=compress,format&rect=744,0,2976,2976&w=1080&h=1080" alt=""></a>
+        <a href=""><img src="https://images.prismic.io/qrates-prd/88610884-3509-4baa-aeb0-a49ed0c8300b_artist_sol.jpg?auto=compress,format&rect=0,544,1326,1326&w=1080&h=1080" alt=""></a>
+        <a href=""><img src="https://images.prismic.io/qrates-prd/b8233c51-3e87-4e97-a87b-841031f4c456_0900150_0900150-R1-E014.jpg?auto=compress,format&rect=124,0,1252,1252&w=1080&h=1080" alt=""></a>
+        <a href=""><img src="https://images.prismic.io/qrates-prd/3f7975b5-89dd-4088-82ad-66632dac02e6_P1133530-Edit.jpg?auto=compress,format&rect=0,0,1125,1125&w=1080&h=1080" alt=""></a>
+        <a href=""><img src="https://images.prismic.io/qrates-prd/c5ebfe34-c1b9-4310-b295-f7289dc7f3e2_HC_Vinyl_Pat_A.JPG?auto=compress,format&rect=0,383,3332,3332&w=1080&h=1080" alt=""></a>
+        <a href=""><img src="https://images.prismic.io/qrates-prd/16097916-6ba8-43de-9da6-ab3a7638a7ec_Snapinsta.app_1080_270220963_631586554551891_269808778014237197_n.jpg?auto=compress,format&rect=0,0,1080,1080&w=1080&h=1080" alt=""></a>
+    </div>
+    <footer>
+        <div class="footer-top">
+            <div class="footer-for-artists">
+                <h1>FOR ARTISTS</h1>
+                <a href="">For Artists</a>
+                <a href="">How it Works</a>
+                <a href="">Artist Toolkit</a>
+                <a href="">Referral Program</a>
+            </div>
+            <div class="footer-for-artists">
+                <h1>FOR FANS</h1>
+                <a href="">For Fans</a>
+                <a href="">Records</a>
+                <a href="">Cassettes</a>
+                <a href="">Stories</a>
+                <a href="">Qrates Curated</a>
+            </div>
+            
+            <div class="footer-for-artists">
+                <h1>OUR COMPANY</h1>
+                <a href="">About Qrates</a>
+                <a href="">Careers</a>
+                <a href="">Partners</a>
+            </div>
+            <div class="footer-for-artists">
+                <h1>HELP</h1>
+                <a href="">Support Center</a>
+                <a href="">Contact Us</a>
+                <a href="">Returns</a>
+                <a href="">Shipping</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="left">
+                <img src="https://assets.qrates.com/packs/media/logos/qrates-logo-footer-498fa5b7.svg" alt="">
+            </div>
+            <div class="right">
+                <select name="" id="">
+                    <option value="English">English</option>
+                </select>
+                <div class="footer-btns">
+                    <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                  </svg></a>
+                <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                  </svg></a>
+                <a><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                    <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                  </svg></a>
+                </div>
+                <div class="end">
+                    <a href="">Terms of Service</a><a href="">Privacy Policy</a><a href="">Legal Information</a>
+                  <span>© TDMS Inc.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
